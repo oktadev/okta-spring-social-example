@@ -4,6 +4,8 @@ server:
     session:
       tracking-modes: cookie
 okta:
+  client:
+    orgUrl: << Your Okta preview url >>
   oauth2:
     redirectUri: /authorization-code/callback
     issuer: << Your issuer URL >>

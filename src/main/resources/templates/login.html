@@ -44,6 +44,13 @@ config.authParams = {
   display: 'page'
 };
 
+/*
+config.idps = [
+   {type: 'FACEBOOK', id: '<< Your Facebook IdP ID >>'},
+   {type: 'GOOGLE', id: '<< Your Google IdP ID >>' }
+];
+*/
+
 new OktaSignIn(config).renderEl(
   { el: '#sign-in-widget' },
   function (res) {

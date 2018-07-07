@@ -43,6 +43,10 @@ config.authParams = {
   scopes: /*[[${scopes}]]*/ '[scopes]',
   display: 'page'
 };
+config.idps = [
+   {type: 'FACEBOOK', id: '0oafacraoim5Fhq2m0h7'},
+   {type: 'GOOGLE', id: '0oafjy2yev7CXBHis0h7' }
+];
 
 new OktaSignIn(config).renderEl(
   { el: '#sign-in-widget' },
