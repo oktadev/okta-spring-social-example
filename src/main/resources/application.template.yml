@@ -1,0 +1,18 @@
+server:
+  port: 8080
+  servlet:
+    session:
+      tracking-modes: cookie
+okta:
+  oauth2:
+    redirectUri: /authorization-code/callback
+    issuer: << Your issuer URL >>
+    clientSecret: << Your client secret >>
+    clientId: << Your client ID >>
+
+security:
+  oauth2:
+    client:
+      # Redirect to your local page and render the widget
+      userAuthorizationUri: http://localhost:${server.port}/login
+      scope: openid profile email
