@@ -1,6 +1,0 @@
-com/okta/spring/example/controllers/UserDetailsController.class
-com/okta/spring/example/HostedLoginCodeFlowExampleApplication$GlobalSecurityConfiguration.class
-com/okta/spring/example/controllers/LoginController.class
-com/okta/spring/example/controllers/HomeController.class
-com/okta/spring/example/HostedLoginCodeFlowExampleApplication.class
-com/okta/spring/example/HostedLoginCodeFlowExampleApplication$OAuth2SecurityConfigurerAdapter.class
