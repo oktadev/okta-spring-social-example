@@ -4,7 +4,7 @@ This example app shows how to add social login to a Spring Boot app with Okta.
 
 Please read [Add Social Login to Your Spring Boot 2.0 App](https://developer.okta.com/blog/2018/07/24/social-spring-boot) to see how this app was created.
 
-**Prerequisites:** [Java 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) and an [Okta Developer Account](https://developer.okta.com).
+**Prerequisites:** [Java 11](https://adoptopenjdk.net/) and an [Okta Developer Account](https://developer.okta.com).
 
 > [Okta](https://developer.okta.com/) has Authentication and User Management APIs that reduce development time with instant-on, scalable user infrastructure. Okta's intuitive API and expert support make it easy for developers to authenticate, manage, and secure users and roles in any application.
 
@@ -15,13 +15,9 @@ Please read [Add Social Login to Your Spring Boot 2.0 App](https://developer.okt
 
 ## Getting Started
 
-You will need to create an OIDC Application in Okta to get your settings to perform authentication. 
+Before you begin, you’ll need a free Okta developer account. Install the [Okta CLI](https://cli.okta.com) and run `okta register` to sign up for a new account. If you already have an account, run `okta login`. Then, run `okta apps create`. Select the default app name, or change it as you see fit. Choose **Web** and press **Enter**.
 
-1. Log in to your developer account on [developer.okta.com](https://developer.okta.com).
-2. Navigate to **Applications** and click on **Add Application**.
-3. Select **Web** and click **Next**. 
-4. Give the application a name, add `http://localhost:8080/authorization-code/callback` as a Login redirect URI, and click **Done**.
-5. Edit the project and enable "Implicit (Hybrid)" as a grant type and click **Save**.
+Select **Other**. Then, change the Redirect URI to `http://localhost:8080/authorization-code/callback` and use `http://localhost:8080` for the Logout Redirect URI.
 
 Copy `src/main/resources/application.template.yml` to `src/main/resources/application.yml` and fill in the necessary information.
 
@@ -38,7 +34,7 @@ This example uses the following open source libraries:
 
 ## Help
 
-Please post any questions as comments on the [blog post](https://developer.okta.com/blog/2018/07/24/social-spring-boot), or visit our [Okta Developer Forums](https://devforum.okta.com/). You can also email developers@okta.com if you'd like to create a support ticket.
+Please post any questions as comments on the [blog post](https://developer.okta.com/blog/2018/07/24/social-spring-boot), or visit our [Okta Developer Forums](https://devforum.okta.com/). 
 
 ## License
 

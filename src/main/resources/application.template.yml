@@ -1,20 +1,22 @@
 server:
   port: 8080
-  servlet:
-    session:
-      tracking-modes: cookie
-okta:
-  client:
-    orgUrl: << Your Okta preview url >>
-  oauth2:
-    redirectUri: /authorization-code/callback
-    issuer: << Your issuer URL >>
-    clientSecret: << Your client secret >>
-    clientId: << Your client ID >>
 
-security:
+spring:
+  security:
+    oauth2:
+      client:
+        provider:
+          okta:
+            authorization-uri: http://localhost:${server.port}/signin
+            user-name-attribute: email
+
+okta:
   oauth2:
-    client:
-      # Redirect to your local page and render the widget
-      userAuthorizationUri: http://localhost:${server.port}/login
-      scope: openid profile email
+    redirect-uri: /authorization-code/callback
+    issuer: https://<< your okta domain>>/oauth2/default
+    clientSecret: << your client secret >>
+    clientId: << your client id >>
+    scopes:
+      - openid
+      - email
+      - profile
